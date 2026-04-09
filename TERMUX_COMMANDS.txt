@@ -1,0 +1,30 @@
+# Termux commands
+
+# 1) Go to the folder with the zip
+cd /storage/emulated/0/Download
+
+# 2) Unzip
+unzip callsnap_phase1_scaffold_fixed.zip -d callsnap_phase1_scaffold_fixed
+
+# 3) Go into your Git repo folder
+cd /path/to/CallSnapApp
+
+# 4) Make Git trust the folder if needed
+git config --global --add safe.directory /path/to/CallSnapApp
+
+# 5) Remove old conflicting files from the repo (adjust paths if they exist)
+rm -f app/src/main/java/com/rjv/callsnapapp/Models.kt
+rm -f app/src/main/java/com/rjv/callsnapapp/AppStorage.kt
+rm -f app/src/main/java/com/rjv/callsnapapp/data/model/AppSettings.kt
+rm -f app/src/main/java/com/rjv/callsnapapp/viewmodel/MainViewModel.kt
+rm -f app/src/main/java/com/rjv/callsnapapp/ui/AppNavHost.kt
+rm -f app/src/main/java/com/rjv/callsnapapp/MainActivity.kt
+
+# 6) Copy the new scaffold over your repo
+cp -r /storage/emulated/0/Download/callsnap_phase1_scaffold_fixed/* .
+
+# 7) Commit and push
+git add -A
+git commit -m "Fix Kotlin scaffold and remove conflicts"
+git branch -M main
+git push -u origin main --force

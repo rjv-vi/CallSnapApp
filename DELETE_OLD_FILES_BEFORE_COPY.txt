@@ -1,0 +1,7 @@
+If these files exist in your current repo, delete them or replace them before building:
+- app/src/main/java/com/rjv/callsnapapp/Models.kt
+- app/src/main/java/com/rjv/callsnapapp/AppStorage.kt
+- app/src/main/java/com/rjv/callsnapapp/data/model/AppSettings.kt (old duplicate)
+- app/src/main/java/com/rjv/callsnapapp/viewmodel/MainViewModel.kt (old duplicate)
+- app/src/main/java/com/rjv/callsnapapp/ui/AppNavHost.kt (old duplicate)
+- app/src/main/java/com/rjv/callsnapapp/MainActivity.kt (old duplicate)
